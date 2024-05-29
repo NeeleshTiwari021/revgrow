@@ -1,0 +1,17 @@
+.notification{
+    right: 1rem;
+    top: 6rem;
+}
+
+.message_overflow{
+    height: 65vh;
+    overflow: scroll;    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.message_block{
+    top: 7rem;
+    right: 2rem;
+}

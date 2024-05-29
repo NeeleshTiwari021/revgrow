@@ -3,6 +3,9 @@ import { CiBellOn } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
 import { CiGlobe } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
+import Notification from './popup/notification';
+import Langague from './popup/langague';
+import Message from './popup/message';
 
 
 const Navbar = () => {
@@ -24,6 +27,10 @@ const Navbar = () => {
     <div className=' p-2 rounded-xl bg-cyan-300 cursor-pointer'><CiGlobe className=' text-cyan-800 text-xl'/></div>
     <div className=' p-2 rounded-xl bg-cyan-300 cursor-pointer'><CiSettings className=' text-cyan-800 text-xl'/></div>
   </div>
+
+  {/* <Notification/> */}
+  {/* <Langague/> */}
+  {/* <Message/> */}
 
 
     </div>

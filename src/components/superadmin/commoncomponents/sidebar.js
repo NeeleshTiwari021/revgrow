@@ -12,14 +12,14 @@ import { LuUsers2 } from "react-icons/lu";
 import { MdOutlineRateReview } from "react-icons/md";
 import { CiHeadphones } from "react-icons/ci";
 import { IoSettingsOutline } from "react-icons/io5";
-import logo from '../../../images/logo.jpg';
+import logo from '../../../images/logo.png';
 import './common.css';
 
 const Sidebar = () => {
   return (
-    <div className='sidebar flex flex-col gap-6 p-4 bg-white h-full overflow-hidden overflow-y-auto overflow-x-auto'>
+    <div className='sidebar flex flex-col p-4 bg-white h-full overflow-hidden overflow-y-auto overflow-x-auto'>
       <div className=' flex justify-center items-center'>
-        <img src={logo} className=' h-32' alt='logo'/>
+        <img src={logo} className=' h-48 cursor-pointer' alt='logo'/>
       </div>
 
       <div className=' flex flex-col gap-3'>
