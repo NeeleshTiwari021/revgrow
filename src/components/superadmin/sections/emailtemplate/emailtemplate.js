@@ -3,8 +3,6 @@ import Navbar from '../../commoncomponents/navbar'
 
 const Emailtemplate = () => {
   return (
-    <div className='main_block_superadmin p-4'>
-            <Navbar />
             <div className='flex flex-col gap-4 mt-4 p-4'>
                 <div className='flex justify-between'>
                     <h1 className='text-3xl font-semibold'>New User</h1>
@@ -44,7 +42,6 @@ const Emailtemplate = () => {
                         </div>
                 </div>
                 </div>
-    </div>
     </div>
   )
 }

@@ -3,8 +3,6 @@ import Navbar from '../../commoncomponents/navbar'
 
 const Planrequest = () => {
     return (
-        <div className='main_block_superadmin p-4'>
-            <Navbar />
             <div className=' flex flex-col gap-4 mt-4 p-4'>
                 <div className=' flex justify-between'>
                     <h1 className=' text-3xl font-semibold'>Plan Request</h1>
@@ -14,7 +12,6 @@ const Planrequest = () => {
                 <p className=' font-semibold text-lg'>No Manual Plan Request Found</p>
                 </div>
             </div>
-        </div>
     )
 }
 

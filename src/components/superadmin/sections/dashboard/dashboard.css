@@ -2,3 +2,45 @@
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);    
 }
+
+.grid1_dashboard{
+  background-image: url("../../../../images/dashboard/grid1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid2_dashboard{
+    background-image: url("../../../../images/dashboard/grid2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid3_dashboard{
+    background-image: url("../../../../images/dashboard/grid3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid4_dashboard{
+    background-image: url("../../../../images/dashboard/grid4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid5_dashboard{
+    background-image: url("../../../../images/dashboard/grid5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid6_dashboard{
+    background-image: url("../../../../images/dashboard/grid6.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

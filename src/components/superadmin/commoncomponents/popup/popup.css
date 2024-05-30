@@ -15,3 +15,13 @@
     top: 7rem;
     right: 2rem;
 }
+
+.modal-wrapper_Dashboard{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation: fadeIn 0.9s ease-in-out;
+    background-color: rgba(111, 111, 111, 0.54);
+}

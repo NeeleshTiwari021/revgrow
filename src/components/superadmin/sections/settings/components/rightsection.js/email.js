@@ -68,6 +68,11 @@ const Email = () => {
                     />
                 </div>
             </div>
+
+            <div className=' flex gap-2 justify-end'>
+                        <button className=' px-5 py-1 border rounded-lg border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300'>Send Test Mail</button>
+                        <button className=' px-5 py-1 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-all duration-300'>Save Changes</button>      
+                    </div>
         </div>
     )
 }

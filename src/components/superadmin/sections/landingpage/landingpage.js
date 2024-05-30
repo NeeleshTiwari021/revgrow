@@ -3,8 +3,6 @@ import Navbar from '../../commoncomponents/navbar'
 
 const Landingpage = () => {
     return (
-        <div className='main_block_superadmin p-4'>
-            <Navbar />
             <div className='flex flex-col gap-4 mt-4 p-4'>
                 <div className='flex justify-between'>
                     <h1 className='text-3xl font-semibold'>Landing Page</h1>
@@ -12,9 +10,9 @@ const Landingpage = () => {
 
                 <div className='p-4 rounded-xl bg-white flex flex-col gap-4'>
 
-                    <div className=' flex justify-between items-end gap-2'>
+                    <div className=' flex flex-col justify-between items-end gap-2'>
 
-                        <div className=' flex flex-col flex-1'>
+                        <div className=' flex flex-col flex-1 w-full'>
                             <label className=' font-semibold text-xl'>Accept online payments and give customers more ways to play</label>
                             <textarea
                                 className='border border-gray-300 rounded-xl p-2 focus:outline-none focus:border-blue-500'
@@ -22,7 +20,7 @@ const Landingpage = () => {
                             ></textarea>
                         </div>
 
-                        <div className=' flex flex-col gap-3 mb-4 flex-1'>
+                        <div className=' flex flex-col gap-3 mb-4 flex-1 w-full'>
                             <p className='text-lg font-roboto font-semibold'>Add Video</p>
 
                             <input type='file' id='biffile' className=' hidden' />
@@ -98,7 +96,6 @@ const Landingpage = () => {
 
                 </div>
             </div>
-        </div>
     )
 }
 

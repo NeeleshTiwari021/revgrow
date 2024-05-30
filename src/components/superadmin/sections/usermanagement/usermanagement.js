@@ -9,8 +9,6 @@ import Navbar from '../../commoncomponents/navbar'
 
 const UserManagement = () => {
     return (
-        <div className='main_block_superadmin p-4'>
-            <Navbar />
             <div className=' flex flex-col gap-4 mt-4 p-4'>
                 <div className=' flex justify-start gap-2 flex-wrap'>
                 <button className=' px-3 py-1 rounded-xl  bg-green-600 transition-all duration-300 text-white'>+ Add User</button>
@@ -96,7 +94,6 @@ const UserManagement = () => {
 
                 </div>
             </div>
-        </div>
     )
 }
 

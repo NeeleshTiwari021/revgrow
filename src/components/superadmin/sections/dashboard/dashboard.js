@@ -32,13 +32,12 @@ const Dashboard = () => {
     ]
 
     return (
-        <div class="p-4 main_block_superadmin">
-            <Navbar />
+        
             <div className=' flex flex-col gap-8 mt-4'>
                 <h1 className=' text-3xl font-semibold'>Dashboard</h1>
 
                 <div className=' grid grid-cols-3 gap-2 place-content-center'>
-                    <div className='dashboard_cards flex justify-between items-center bg-orange-500 p-4 rounded-xl'>
+                    <div className='dashboard_cards flex justify-between items-center grid1_dashboard p-4 rounded-xl'>
                         <div className=' text-white'>
                             <p className=' text-3xl font-semibold'>17</p>
                             <p>Total User</p>
@@ -48,7 +47,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className='dashboard_cards flex justify-between items-center bg-orange-500 p-4 rounded-xl'>
+                    <div className='dashboard_cards flex justify-between items-center grid2_dashboard p-4 rounded-xl'>
                         <div className=' text-white'>
                             <p className=' text-3xl font-semibold'>17</p>
                             <p>Total User</p>
@@ -58,7 +57,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className='dashboard_cards flex justify-between items-center bg-orange-500 p-4 rounded-xl'>
+                    <div className='dashboard_cards flex justify-between items-center grid3_dashboard p-4 rounded-xl'>
                         <div className=' text-white'>
                             <p className=' text-3xl font-semibold'>40</p>
                             <p>Total Order</p>
@@ -68,7 +67,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className='dashboard_cards flex justify-between items-center bg-orange-500 p-4 rounded-xl'>
+                    <div className='dashboard_cards flex justify-between items-center grid4_dashboard p-4 rounded-xl'>
                         <div className=' text-white'>
                             <p className=' text-3xl font-semibold'>4</p>
                             <p>Total Plans</p>
@@ -78,7 +77,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className='dashboard_cards flex justify-between items-center bg-orange-500 p-4 rounded-xl'>
+                    <div className='dashboard_cards flex justify-between items-center grid5_dashboard p-4 rounded-xl'>
                         <div className=' text-white'>
                             <p className=' text-3xl font-semibold'>17</p>
                             <p>Total User</p>
@@ -88,7 +87,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className='dashboard_cards flex justify-between items-center bg-orange-500 p-4 rounded-xl'>
+                    <div className='dashboard_cards flex justify-between items-center grid6_dashboard p-4 rounded-xl'>
                         <div className=' text-white'>
                             <p className=' text-3xl font-semibold'>17</p>
                             <p>About to Expire</p>
@@ -181,7 +180,6 @@ const Dashboard = () => {
                 
 
             </div>
-        </div>
     )
 }
 
