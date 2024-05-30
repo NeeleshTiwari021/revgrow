@@ -16,6 +16,12 @@
     right: 2rem;
 }
 
+@media screen and (max-width: 450px) {
+    .message_block{
+        right: 0rem;
+    }
+}
+
 .modal-wrapper_Dashboard{
     position: fixed;
     top: 0;

@@ -10,7 +10,22 @@
     }
 }
 
+@media (max-width: 850px) {
+.search_block{
+  display: none;
+}
+}
 
+@media (max-width: 450px) {
+.navbar_main_block{
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buttons_navbar{
+  justify-content: space-around;
+}
+}
 
 @media (max-width: 1000px) {
   .sidebar {
