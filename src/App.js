@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/superadmin/commoncomponents/navbar';
 import Sidebar from './components/superadmin/commoncomponents/sidebar';
 import Companies from './components/superadmin/sections/companies/companies';
@@ -11,7 +11,6 @@ import UserManagement from './components/superadmin/sections/usermanagement/user
 import Planrequest from './components/superadmin/sections/planrequest/planrequest';
 import Landingpage from './components/superadmin/sections/landingpage/landingpage';
 import Emailtemplate from './components/superadmin/sections/emailtemplate/emailtemplate';
-import Settings from './components/superadmin/sections/settings/settings';
 import Profile from './components/superadmin/sections/profile/profile';
 import EmailPage from './components/superadmin/sections/settings/components/page/email';
 import ChachePage from './components/superadmin/sections/settings/components/page/chache';
@@ -24,21 +23,27 @@ import StoragePage from './components/superadmin/sections/settings/components/pa
 import RecaptchaPage from './components/superadmin/sections/settings/components/page/recaptcha';
 import TwilioPage from './components/superadmin/sections/settings/components/page/twilio';
 import { useState } from 'react';
+import Login from './components/superadmin/sections/auth/login';
+import Registration from './components/superadmin/sections/auth/registration';
 
 function App() {
-
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const location = useLocation();
 
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
   };
 
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/registration';
+
   return (
-    <div className=' flex'>
-      <Sidebar isSidebarVisible={isSidebarVisible}/>
-      <div class="p-4 main_block_superadmin">
-        <Navbar toggleSidebar={toggleSidebar}/>
+    <div className='flex'>
+      {!isAuthPage && <Sidebar isSidebarVisible={isSidebarVisible} />}
+      <div className="p-4 main_block_superadmin">
+        {!isAuthPage && <Navbar toggleSidebar={toggleSidebar} />}
         <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/registration' element={<Registration />} />
           <Route path='/' element={<Dashboard />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/order' element={<Order />} />

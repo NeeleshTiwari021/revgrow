@@ -1,0 +1,16 @@
+.login_page{
+    background-image: url("https://img.freepik.com/free-photo/blue-office-stationery-with-copy-space_23-2148475340.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainletter_login{
+    letter-spacing: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .leftside_auth{
+        display: none;
+    }
+}
