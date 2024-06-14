@@ -50,11 +50,11 @@ const Sidebar = () => {
     {
       "name": "Twilio Settings",
       "links": "/settings/twilio"
-    },
-    {
-      "name": "Refer and Earn",
-      "links": "/settings/refer-and-earn"
-    },
+     },
+    // {
+    //   "name": "Refer and Earn",
+    //   "links": "/settings/refer-and-earn"
+    // },
   ]
 
   return (

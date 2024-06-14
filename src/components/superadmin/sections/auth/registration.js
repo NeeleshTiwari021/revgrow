@@ -27,7 +27,7 @@ const Registration = () => {
           </div>
         </div>
       </div>
-      <div className=' register_auth flex-1 p-4 flex flex-col items-center gap-4'>
+      <div className=' register_auth flex-1 p-4 flex flex-col items-center gap-4 pt-4'>
         <div>
           <p className='text-4xl font-medium text-center mb-1'>Create an account</p>
           <p className='text-center text-sm font-medium text-gray-600'>Enter your Untitled Account Details</p>

@@ -31,7 +31,7 @@ function Payment() {
         ].map((payment, index) => (
           <div key={index} className="flex items-center justify-between border p-4 mt-4">
             <div className="flex items-center">
-              <div className="text-2xl mr-2">{payment.icon}</div>
+              <div className="text-3xl mr-2 text-sky-600">{payment.icon}</div>
               <span className="text-xl">{payment.name}</span>
             </div>
             <ToggleSwitch label="Enable" enabled={payment.enabled} onToggle={payment.toggle} />

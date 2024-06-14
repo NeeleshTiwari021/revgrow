@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaFilter } from "react-icons/fa";
 import { FaFilePdf } from "react-icons/fa6";
 import { BsFileEarmarkPdfFill } from "react-icons/bs";
@@ -7,31 +7,45 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { LuPencil } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Navbar from '../../commoncomponents/navbar'
+import Filter from '../../commoncomponents/filter';
 
 const Coupons = () => {
-    return (
-            <div className=' flex flex-col gap-4 mt-4 p-4'>
-                <div className=' flex justify-between'>
-                    <h1 className=' text-3xl font-semibold'>Coupons</h1>
-                    <button className=' text-white font-semibold text-xl px-4 rounded-lg bg-green-400 hover:bg-green-500'>+</button>
-                </div>
 
-                <div className='p-4 rounded-xl bg-white flex flex-col gap-4'>
+    const [filter, setFilter] = useState(false);
+
+    const showFilter = () => {
+        setFilter(!filter);
+    }
+
+    return (
+        <div className=' flex flex-col gap-4 mt-4 p-4'>
+            <div className=' flex justify-between'>
+                <h1 className=' text-3xl font-semibold'>Coupons</h1>
+                <button className=' text-white font-semibold text-xl px-4 rounded-lg bg-green-400 hover:bg-green-500'>+</button>
+            </div>
+
+            <div className='p-4 rounded-xl bg-white flex flex-col gap-4'>
 
                 <div className=' flex justify-between '>
-                <div className=' flex gap-2 items-center'>
+                    <div className=' flex gap-2 items-center'>
 
-                <FaFilter className=' text-2xl text-green-500 cursor-pointer' />
-                <input type="text" class="w-fit py-1 pl-10 pr-4 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..." />
+                        <FaFilter onClick={showFilter} className=' text-2xl text-green-500 cursor-pointer' />
 
+                        <input type="text" class="w-fit py-1 pl-10 pr-4 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..." />
+
+                    </div>
+
+                    <div className=' flex gap-2 items-center'>
+                        <FaFilePdf className=' text-2xl text-red-500 cursor-pointer' />
+                        <BsFileEarmarkPdfFill className=' text-2xl text-green-600 cursor-pointer' />
+                        <LuPrinter className=' text-2xl text-gray-500 cursor-pointer' />
+                    </div>
                 </div>
 
-                <div className=' flex gap-2 items-center'>
-                    <FaFilePdf className=' text-2xl text-red-500 cursor-pointer'/>
-                    <BsFileEarmarkPdfFill className=' text-2xl text-green-600 cursor-pointer'/>
-                    <LuPrinter className=' text-2xl text-gray-500 cursor-pointer'/>
-                </div>
-                </div>
+                {filter && (
+                    <Filter/>
+                )}
+
 
                 <div className='overflow_scroll_list overflow-scroll w-full backoffice_table'>
                     <table className=" w-full">
@@ -46,18 +60,18 @@ const Coupons = () => {
                             </tr>
                         </thead>
                         <tbody>
-                                <tr>
-                                    <td className="p-2 overflow_p text-center">name</td>
-                                    <td className="p-2 overflow_p text-center">demo</td>
-                                    <td className="p-2 overflow_p text-center">demo</td>
-                                    <td className="p-2 overflow_p text-center">demo</td>
-                                    <td className="p-2 overflow_p text-center">demo</td>
-                                    <td className="p-2 overflow_p text-center flex gap-2 justify-center">
-                                    <MdOutlineRemoveRedEye className=' font-semibold text-4xl cursor-pointer bg-sky-500 text-white p-2 rounded-lg'/>
-                                    <LuPencil className=' font-semibold text-4xl cursor-pointer bg-yellow-500 text-white p-2 rounded-lg'/>
-                                    <RiDeleteBin6Line className='  font-semibold text-4xl cursor-pointer bg-red-500 text-white p-2 rounded-lg'/>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td className="p-2 overflow_p text-center">name</td>
+                                <td className="p-2 overflow_p text-center">demo</td>
+                                <td className="p-2 overflow_p text-center">demo</td>
+                                <td className="p-2 overflow_p text-center">demo</td>
+                                <td className="p-2 overflow_p text-center">demo</td>
+                                <td className="p-2 overflow_p text-center flex gap-2 justify-center">
+                                    <MdOutlineRemoveRedEye className=' font-semibold text-4xl cursor-pointer bg-sky-500 text-white p-2 rounded-lg' />
+                                    <LuPencil className=' font-semibold text-4xl cursor-pointer bg-yellow-500 text-white p-2 rounded-lg' />
+                                    <RiDeleteBin6Line className='  font-semibold text-4xl cursor-pointer bg-red-500 text-white p-2 rounded-lg' />
+                                </td>
+                            </tr>
 
                         </tbody>
                     </table>
@@ -89,8 +103,8 @@ const Coupons = () => {
                     </div>
                 </div>
 
-                </div>
             </div>
+        </div>
     )
 }
 

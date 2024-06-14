@@ -1,0 +1,33 @@
+.card_box_plan{
+    border-radius: 15px 50px 30px;
+}
+
+.delete_popup{
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: slideInvoice 0.8s ease-in-out;
+}
+
+@keyframes slideInvoice {
+    from {
+      top: -50%; 
+    }
+    to {
+      top: 50%;
+    }
+  }
+
+@media screen and (max-width: 900px) {
+    .plan_main_div{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .plan_main_div{
+        grid-template-columns: 1fr;
+    }
+}

@@ -27,7 +27,7 @@ const Login = () => {
       <div className='login_auth flex-1 h-screen justify-center items-center p-4 flex flex-col gap-4'>
 
         <div>
-        <div className=' flex gap-2 items-center justify-center'>
+        <div className=' flex gap-2 items-center justify-center pt-4'>
           <p className='text-4xl font-medium text-center mb-1'>Welcome Back</p>
           <MdWavingHand className=' text-4xl text-sky-700'/>
         </div>

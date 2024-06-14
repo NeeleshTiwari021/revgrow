@@ -7,6 +7,7 @@ import Message from './popup/message';
 import Langague from './popup/langague';
 import ProfilePopup from './popup/profile';
 import './common.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ toggleSidebar }) => {
   const [showNotification, setShowNotification] = useState(false);
@@ -55,7 +56,7 @@ const Navbar = ({ toggleSidebar }) => {
         <div className='p-2 rounded-xl bg-cyan-300 cursor-pointer' onClick={handleNotificationClick}><CiBellOn className='text-cyan-800 text-xl' /></div>
         <div className='p-2 rounded-xl bg-cyan-300 cursor-pointer' onClick={handleMessageClick}><CiMail className='text-cyan-800 text-xl' /></div>
         <div className='p-2 rounded-xl bg-cyan-300 cursor-pointer' onClick={handleLanguageClick}><CiGlobe className='text-cyan-800 text-xl' /></div>
-        <div className='p-2 rounded-xl bg-cyan-300 cursor-pointer'><CiSettings className='text-cyan-800 text-xl' /></div>
+        <Link to='/settings/brand' className='p-2 rounded-xl bg-cyan-300 cursor-pointer'><CiSettings className='text-cyan-800 text-xl' /></Link>
         <div className='p-2 rounded-xl bg-cyan-300 cursor-pointer lg:hidden' onClick={toggleSidebar}><CiMenuBurger className='text-cyan-800 text-xl' /></div>
       </div>
 

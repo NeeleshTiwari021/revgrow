@@ -25,6 +25,13 @@ import TwilioPage from './components/superadmin/sections/settings/components/pag
 import { useState } from 'react';
 import Login from './components/superadmin/sections/auth/login';
 import Registration from './components/superadmin/sections/auth/registration';
+import Group_permission from './components/superadmin/sections/usermanagement/components/group_permission';
+import User_report from './components/superadmin/sections/usermanagement/components/user_report';
+import Tickets from './components/superadmin/sections/tickets/tickets';
+import CreateTickets from './components/superadmin/sections/tickets/components/createtickets';
+import Ticketform from './components/superadmin/sections/tickets/components/ticketform';
+import Plan from './components/superadmin/sections/plan/plan';
+import WriteReview from './components/superadmin/sections/reviewmanagement/writeReview';
 
 function App() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -47,12 +54,19 @@ function App() {
           <Route path='/' element={<Dashboard />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/order' element={<Order />} />
+          <Route path='/plans' element={<Plan />} />
           <Route path='/companies' element={<Companies />} />
           <Route path='/coupons' element={<Coupons />} />
           <Route path='/review' element={<Review />} />
+          <Route path='/write-review' element={<WriteReview />} />
+          <Route path='/tickets' element={<Tickets/>} />
+          <Route path='/create-tickets' element={<CreateTickets/>} />
+          <Route path='/ticket-form' element={<Ticketform/>} />
           <Route path='/landing-page' element={<Landingpage />} />
           <Route path='/plan-request' element={<Planrequest />} />
           <Route path='/user_management' element={<UserManagement />} />
+          <Route path='/user_report' element={<User_report />} />
+          <Route path='/group_permission' element={<Group_permission />} />
           <Route path='/email-template' element={<Emailtemplate />} />
           <Route path='/settings/brand' element={<BrandPage />} />
           <Route path='/settings/email' element={<EmailPage />} />

@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaFilter } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { LuPencil } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Navbar from '../../commoncomponents/navbar'
+import { Link } from 'react-router-dom';
+import Filter from '../../commoncomponents/filter';
 
 const Review = () => {
+
+    const [filter, setFilter] = useState(false);
+
+    const showFilter = () => {
+        setFilter(!filter);
+    }
+
     return (
+        
             <div className=' flex flex-col gap-4 mt-4 p-4'>
                 <div className=' flex justify-between'>
                     <h1 className=' text-3xl font-semibold'>Review Management</h1>
@@ -18,14 +28,16 @@ const Review = () => {
                 <div className=' flex justify-between '>
                 <div className=' flex gap-2 items-center'>
 
-                <FaFilter className=' text-2xl text-green-500 cursor-pointer' />
+                <FaFilter onClick={showFilter} className=' text-2xl text-green-500 cursor-pointer' />
                 <input type="text" class="w-fit py-1 pl-10 pr-4 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..." />
 
                 </div>
 
-                <button className=' px-6 py-1 rounded-lg bg-green-500 text-white flex items-center gap-1'><MdOutlineRateReview className=' text-xl'/> Write a Review</button>
+                <Link to="/write-review"><button className=' px-6 py-1 rounded-lg bg-green-500 text-white flex items-center gap-1'><MdOutlineRateReview className=' text-xl'/> Write a Review</button></Link>
                                     
                 </div>
+
+                {filter && (<Filter/>)}
 
                 <div className='overflow_scroll_list overflow-scroll w-full backoffice_table'>
                     <table className=" w-full">

@@ -3,10 +3,11 @@ import { FaFilter } from "react-icons/fa";
 import { FaFilePdf } from "react-icons/fa6";
 import { BsFileEarmarkPdfFill } from "react-icons/bs";
 import { LuPrinter } from "react-icons/lu";
-import Navbar from '../../commoncomponents/navbar'
-import Filter from '../../commoncomponents/filter';
+import { LuPencil } from "react-icons/lu";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import Filter from '../../../commoncomponents/filter';
 
-const Order = () => {
+const Usermanagement = () => {
 
     const [filter, setFilter] = useState(false);
 
@@ -15,13 +16,8 @@ const Order = () => {
     }
 
 
-    return (
-            <div className=' flex flex-col gap-4 mt-4 p-4'>
-                <div className=' flex justify-between'>
-                    <h1 className=' text-3xl font-semibold'>Order</h1>
-                </div>
-
-                <div className='p-4 rounded-xl bg-white flex flex-col gap-4'>
+  return (
+    <div className='p-4 rounded-xl bg-white flex flex-col gap-4'>
 
                 <div className=' flex justify-between '>
                 <div className=' flex gap-2 items-center'>
@@ -44,13 +40,13 @@ const Order = () => {
                     <table className=" w-full">
                         <thead>
                             <tr className="bg-purple-200 sticky top-0">
-                                <th className="p-2 overflow_p text-center font-medium">Order Id</th>
-                                <th className="p-2 overflow_p text-center font-medium">Name</th>
-                                <th className="p-2 overflow_p text-center font-medium">Plan Name</th>
-                                <th className="p-2 overflow_p text-center font-medium">Price</th>
+                                <th className="p-2 overflow_p text-center font-medium">User Name</th>
+                                <th className="p-2 overflow_p text-center font-medium">Phone</th>
+                                <th className="p-2 overflow_p text-center font-medium">Email</th>
+                                <th className="p-2 overflow_p text-center font-medium">Role</th>
+                                <th className="p-2 overflow_p text-center font-medium">Created On</th>
                                 <th className="p-2 overflow_p text-center font-medium">Status</th>
-                                <th className="p-2 overflow_p text-center font-medium">Payment Type</th>
-                                <th className="p-2 overflow_p text-center font-medium">Date</th>
+                                <th className="p-2 overflow_p text-center font-medium">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,11 +55,14 @@ const Order = () => {
                                     <td className="p-2 overflow_p text-center">demo</td>
                                     <td className="p-2 overflow_p text-center">demo</td>
                                     <td className="p-2 overflow_p text-center">demo</td>
+                                    <td className="p-2 overflow_p text-center">demo</td>
                                     <td className="p-2 overflow_p text-center">
-                                        <button className=' px-6 py-1 rounded-lg bg-green-500 text-white'>Success</button>
+                                    <button className=' px-6 py-1 rounded-lg bg-green-500 text-white'>Success</button>
                                     </td>
-                                    <td className="p-2 overflow_p text-center">demo</td>
-                                    <td className="p-2 overflow_p text-center">demo</td>
+                                    <td className="p-2 overflow_p text-center flex gap-2 justify-center">
+                                    <LuPencil className=' font-semibold text-4xl cursor-pointer bg-yellow-500 text-white p-2 rounded-lg'/>
+                                    <RiDeleteBin6Line className='  font-semibold text-4xl cursor-pointer bg-red-500 text-white p-2 rounded-lg'/>
+                                    </td>
                                 </tr>
 
                         </tbody>
@@ -97,8 +96,7 @@ const Order = () => {
                 </div>
 
                 </div>
-            </div>
-    )
+  )
 }
 
-export default Order
+export default Usermanagement

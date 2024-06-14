@@ -8,6 +8,7 @@ import { CiGift, CiMail } from "react-icons/ci";
 import { MdOutlineShoppingCart, MdOutlineRateReview } from "react-icons/md";
 import { RiPagesLine } from "react-icons/ri";
 import { LuUsers2 } from "react-icons/lu";
+import { FaHeadset } from "react-icons/fa6";
 import logo from '../../../images/logo.png';
 import './common.css';
 
@@ -26,7 +27,7 @@ const Sidebar = ({ isSidebarVisible }) => {
   return (
     <div className={`sidebar flex flex-col p-4 h-full bg-white overflow-hidden overflow-y-auto overflow-x-auto ${isSidebarVisible ? '' : 'sidebar-hidden'}`}>
       <div className='flex justify-center items-center'>
-        <img src={logo} className='h-48 cursor-pointer' alt='logo'/>
+        <img src={logo} className='h-28 object-cover cursor-pointer' alt='logo'/>
       </div>
 
       <div className='flex flex-col gap-3'>
@@ -110,13 +111,17 @@ const Sidebar = ({ isSidebarVisible }) => {
           <MdOutlineRateReview className='text-4xl text-black bg-white p-2 rounded-xl'/>
           <p className='font-semibold'>Review Management</p>
         </Link>
-        {/* <Link to='/tickets' className='px-6 py-2 flex items-center gap-2 cursor-pointer hover:bg-cyan-600 rounded-xl'>
-          <CiHeadphones className='text-4xl bg-white p-2 rounded-xl'/>
-          <p className='font-semibold hover:text-white'>Tickets</p>
-        </Link> */}
+        <Link 
+          to='/tickets' 
+          className={`px-6 py-2 flex items-center gap-2 cursor-pointer rounded-xl ${activeLink === '/tickets' ? 'bg-green-600 text-white' : 'hover:bg-cyan-700'}`} 
+          onClick={() => handleLinkClick('/tickets')}
+        >
+          <FaHeadset className='text-4xl text-black bg-white p-2 rounded-xl'/>
+          <p className='font-semibold'>Tickets</p>
+        </Link>
         <Link 
           to='/settings/brand' 
-          className={`px-6 py-2 flex items-center gap-2 cursor-pointer rounded-xl ${activeLink === '/settings/email' ? 'bg-green-600 text-white' : 'hover:bg-cyan-700'}`} 
+          className={`px-6 py-2 flex items-center gap-2 cursor-pointer rounded-xl ${activeLink === '/settings/brand' ? 'bg-green-600 text-white' : 'hover:bg-cyan-700'}`} 
           onClick={() => handleLinkClick('/settings/brand')}
         >
           <IoSettingsOutline className='text-4xl text-black bg-white p-2 rounded-xl'/>
