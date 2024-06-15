@@ -6,7 +6,6 @@ import { LuPrinter } from "react-icons/lu";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { LuPencil } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import Navbar from '../../commoncomponents/navbar'
 import Filter from '../../commoncomponents/filter';
 
 const Coupons = () => {

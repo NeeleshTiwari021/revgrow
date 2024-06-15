@@ -22,7 +22,7 @@ const Restaurant = () => {
                 'Social Proff Banners',
             ],
             purchased: true,
-            button: 'Learn More',
+            buttons: 'Learn More',
         },
         {
             name: 'Business Standard',
@@ -39,7 +39,7 @@ const Restaurant = () => {
                 'Social Proff Banners',
             ],
             purchased: false,
-            button: 'Get In Touch',
+            buttons: 'Get In Touch',
         },
         {
             name: 'Business Premium',
@@ -56,7 +56,7 @@ const Restaurant = () => {
                 'Social Proff Banners',
             ],
             purchased: false,
-            button: 'Learn More',
+            buttons: 'Learn More',
         },
         {
             name: 'Business Pro',
@@ -73,7 +73,7 @@ const Restaurant = () => {
                 'Social Proff Banners',
             ],
             purchased: false,
-            button: 'Get In Touch',
+            buttons: 'Get In Touch',
         },
     ];
 
@@ -96,7 +96,7 @@ const Restaurant = () => {
             {plans.map((plan, index) => (
                 <div
                     key={index}
-                    className={` relative w-full rounded-md p-4 bg-white border-2 border-green-500 shadow-lg`}
+                    className={` relative w-full rounded-md p-4 bg-white border-2 border-sky-400 shadow-lg`}
                 >
 
                 <div className=' absolute card_box_plan bg-blue-500 px-4 right-1 top-1'>
@@ -119,13 +119,14 @@ const Restaurant = () => {
                                 </li>
                             ))}
                         </ul>
+                        <p className=' mt-2 cursor-pointer text-center text-sm font-medium underline text-blue-500 hover:text-blue-700'>{plan.buttons}</p>
+
                         <div className=' flex text-center justify-center gap-2 mt-2'>
                             <LuPencil onClick={handleShowForm} className=' font-semibold text-4xl cursor-pointer bg-yellow-500 text-white p-2 rounded-lg' />
                             <RiDeleteBin6Line onClick={handleShowDelete} className='  font-semibold text-4xl cursor-pointer bg-red-500 text-white p-2 rounded-lg' />
                         </div>
 
-                        <p className=' mt-2 cursor-pointer text-center text-sm font-medium underline text-blue-500 hover:text-blue-700'>{plan.button}</p>
-
+                        
                     </div>
                 </div>
             ))}

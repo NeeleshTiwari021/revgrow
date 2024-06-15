@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Usermanagement from './components/usermanagement';
-import User_report from './components/user_report';
-import Group_permission from './components/group_permission';
+import Userreport from './components/user_report';
+import Grouppermission from './components/group_permission';
 
 const UserManagement = () => {
 
@@ -13,9 +13,9 @@ const UserManagement = () => {
             case 'Usermanagement':
                 return <Usermanagement />;
             case 'User_report':
-                return <User_report />;
+                return <Userreport />;
             case 'Group_permission':
-                return <Group_permission />;
+                return <Grouppermission />;
             default:
                 return <Usermanagement />;
         }

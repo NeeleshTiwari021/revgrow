@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../../commoncomponents/navbar'
 import { LuUsers2 } from "react-icons/lu";
 import { FiShoppingCart } from "react-icons/fi";
 import { TfiCup } from "react-icons/tfi";

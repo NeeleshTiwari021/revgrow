@@ -3,7 +3,6 @@ import { FaFilter } from "react-icons/fa";
 import { CiMenuKebab } from "react-icons/ci";
 import { FaStar } from "react-icons/fa6";
 import { MdOutlinePersonOutline } from "react-icons/md";
-import Navbar from '../../commoncomponents/navbar';
 
 const Companies = () => {
 
@@ -48,7 +47,7 @@ const Companies = () => {
             </div>
 
             <div className=' flex flex-col justify-center items-center'>
-              <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" className=' rounded-full h-16 w-16 object-cover' />
+              <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt='random' className=' rounded-full h-16 w-16 object-cover' />
 
               <p className=' font-medium text-lg text-blue-400'>Rojodiya Infotech</p>
               <p className=' text-xs text-sky-900'>xyz@gmail.com</p>

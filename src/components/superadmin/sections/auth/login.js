@@ -7,7 +7,6 @@ import './auth.css';
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
-    const [loading, setLoading] = useState(false);
 
     
   const handleShowPassword = () => {

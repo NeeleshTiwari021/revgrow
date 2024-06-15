@@ -39,7 +39,7 @@ const User_report = () => {
   };
 
   return (
-    <div className='flex flex-col gap-4 mt-4 p-4'>
+    <div className='flex flex-col gap-4'>
 
       <div className='p-4 rounded-xl bg-white flex flex-col gap-4'>
         <div className='flex justify-between'>

@@ -4,7 +4,6 @@ import { MdOutlineRateReview } from "react-icons/md";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { LuPencil } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import Navbar from '../../commoncomponents/navbar'
 import { Link } from 'react-router-dom';
 import Filter from '../../commoncomponents/filter';
 

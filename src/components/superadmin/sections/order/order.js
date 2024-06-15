@@ -3,7 +3,6 @@ import { FaFilter } from "react-icons/fa";
 import { FaFilePdf } from "react-icons/fa6";
 import { BsFileEarmarkPdfFill } from "react-icons/bs";
 import { LuPrinter } from "react-icons/lu";
-import Navbar from '../../commoncomponents/navbar'
 import Filter from '../../commoncomponents/filter';
 
 const Order = () => {

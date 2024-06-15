@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../../../../commoncomponents/navbar'
 import Sidebar from '../sidebar'
 import CookieSettings from '../rightsection.js/cookie'
 
