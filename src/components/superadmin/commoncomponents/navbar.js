@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CiBellOn, CiMail, CiGlobe, CiSettings } from "react-icons/ci";
+import { CiBellOn, CiMail, CiSettings } from "react-icons/ci";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { CiMenuBurger } from "react-icons/ci";
 import Notification from './popup/notification';

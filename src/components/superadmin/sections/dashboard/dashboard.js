@@ -5,17 +5,10 @@ import { TfiCup } from "react-icons/tfi";
 import { GoPersonAdd } from "react-icons/go";
 import { RiBillLine } from "react-icons/ri";
 import { RiTodoLine } from "react-icons/ri";
-import { Chart as Chartjs } from 'chart.js/auto'
-import { Bar, Doughnut, Line } from 'react-chartjs-2'
 import './dashboard.css';
 
 const Dashboard = () => {
-    const data = [
-        { "label": "ads", "value": 200 },
-        { "label": "subscription", "value": 100 },
-        { "label": "sponsership", "value": 150 },
-        { "label": "brand", "value": 175 }
-    ];
+    
 
     return (
         <div className='flex flex-col gap-8 mt-4'>
@@ -86,78 +79,17 @@ const Dashboard = () => {
             <div className='flex flex-col gap-4 bg-white rounded-2xl p-3'>
                 <h1 className='font-semibold text-2xl'>Recent Order</h1>
 
-                <Line
-                    data={{
-                        labels: data.map((item) => item.label),
-                        datasets: [
-                            {
-                                label: "counts",
-                                data: data.map((item) => item.value),
-                                backgroundColor: ["#7A7AFF", "#ffdd33", "#ff9b2a", "#4e5fcc"],
-                                borderColor: ["#7A7AFF"], // Line color
-                                borderWidth: 2,
-                            }
-                        ],
-                    }}
-                    options={{
-                        tension: 0.4,
-                        plugins: {
-                            legend: {
-                                display: true,
-                            },
-                        },
-                    }}
-                />
+                
             </div>
 
             <div className='flex flex-col lg:flex-row items-center gap-4 w-full'>
                 <div className='bg-white rounded-2xl p-3 flex flex-col gap-3 w-full lg:w-1/2'>
                     <h1 className='font-semibold text-2xl'>Subscriptions</h1>
-                    <Doughnut
-                        data={{
-                            labels: data.map((item) => item.label),
-                            datasets: [
-                                {
-                                    label: "counts",
-                                    borderRadius: 5,
-                                    data: data.map((item) => item.value),
-                                    backgroundColor: ["#7A7AFF", "#ffdd33", "#ff9b2a", "#4e5fcc"],
-                                }
-                            ],
-                        }}
-                        options={{
-                            tension: 0.4,
-                            plugins: {
-                                legend: {
-                                    display: true,
-                                },
-                            },
-                        }}
-                    />
+                    
                 </div>
                 <div className='bg-white rounded-2xl p-3 flex flex-col gap-3 w-full lg:w-1/2'>
                     <h1 className='font-semibold text-2xl'>Monthly Orders</h1>
-                    <Bar
-                        data={{
-                            labels: data.map((item) => item.label),
-                            datasets: [
-                                {
-                                    label: "counts",
-                                    borderRadius: 5,
-                                    data: data.map((item) => item.value),
-                                    backgroundColor: ["#7A7AFF", "#ffdd33", "#ff9b2a", "#4e5fcc"],
-                                }
-                            ],
-                        }}
-                        options={{
-                            tension: 0.4,
-                            plugins: {
-                                legend: {
-                                    display: true,
-                                },
-                            },
-                        }}
-                    />
+                    
                 </div>
             </div>
         </div>
